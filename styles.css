@@ -12,14 +12,20 @@ body {
   padding: 0 16px;
 }
 
-.header {
+/* header actions */
+.btn { padding: 10px 14px; border: 0; border-radius: 9999px; font: inherit; }
+.btn-ghost { background: transparent; color: #0d5bd7; }
+.btn-primary { background: #0d5bd7; color: #fff; }
+
+header {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 16px;
-  padding-right: 72px;
-  text-align: center;
 }
 
-.header h1 {
+header h1 {
   margin: 0;
   font-size: 2rem;
   font-weight: 700;
@@ -28,42 +34,16 @@ body {
   padding-bottom: 8px;
 }
 
-.logo {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  height: 48px;
-}
+#refreshBtn { position: absolute; right: 12px; top: 12px; }
 
-.nav-bar {
-  display: flex;
-  gap: 8px;
-  background-color: #0d5bd7;
-  padding: 8px;
-  overflow-x: auto;
-}
+/* nav layout */
+.nav-bar { display: flex; align-items: center; background: #0d5bd7; padding: 8px 10px; gap: 8px; }
+.nav-left, .nav-right { display: flex; align-items: center; gap: 8px; }
+.nav-spacer { flex: 1 1 auto; }
 
-.nav-button {
-  flex: 1;
-  background-color: #c9c9c9;
-  color: #ffffff;
-  border: none;
-  border-radius: 9999px;
-  padding: 10px 14px;
-  font-size: 1rem;
-  text-align: center;
-  min-height: 44px;
-}
-
-.nav-button:focus-visible {
-  outline: 2px solid #000000;
-  outline-offset: 2px;
-}
-
-.pill--disabled {
-  opacity: 0.5;
-  pointer-events: none;
-}
+/* pills */
+.pill { background: #c9c9c9; color: #fff; border: 0; border-radius: 9999px; padding: 10px 14px; min-height: 44px; }
+.pill--disabled { opacity: 0.35; pointer-events: none; }
 
 .timeline {
   margin-top: 24px;
