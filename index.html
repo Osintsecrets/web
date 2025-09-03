@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cruise Dashboard</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Cruise Dashboard</h1>
+    <img src="/assets/images/logo.png" alt="Cruise Logo" class="logo">
+  </header>
+  <nav class="nav-bar">
+    <button class="nav-button">Left</button>
+    <button class="nav-button">Crown Iris</button>
+    <button class="nav-button">Right</button>
+  </nav>
+  <main class="main-content">
+    <p>Main content will appear here</p>
+  </main>
+  <footer class="footer">
+    <img src="/assets/images/ship.png" alt="Ship" class="footer-image">
+  </footer>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js');
+      });
+    }
+  </script>
+</body>
+</html>
