@@ -1,12 +1,12 @@
-const CACHE_NAME = 'cruise-dashboard-v1';
+const CACHE_NAME = 'cruise-dashboard-v3';
 const ASSETS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/app.js',
-  '/manifest.json',
-  '/assets/images/logo.png',
-  '/assets/images/ship.png'
+  './',
+  './index.html',
+  './styles.css',
+  './app.js',
+  './manifest.json',
+  './assets/images/logo.png',
+  './assets/images/ship.png'
 ];
 
 self.addEventListener('install', event => {
