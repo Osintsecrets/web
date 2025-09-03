@@ -10,18 +10,20 @@
 <body>
   <header class="header">
     <h1>Cruise Dashboard</h1>
-    <img src="/assets/images/logo.png" alt="Cruise Logo" class="logo">
+    <img src="assets/images/logo.png" alt="Cruise Logo" class="logo">
   </header>
   <nav class="nav-bar">
-    <button class="nav-button">Left</button>
-    <button class="nav-button">Crown Iris</button>
-    <button class="nav-button">Right</button>
+    <button class="nav-button" data-target="itinerary">Itinerary</button>
+    <button class="nav-button" data-target="decks">Deck Plans</button>
+    <button class="nav-button" data-target="emergency">Emergency</button>
   </nav>
   <main class="main-content">
-    <p>Main content will appear here</p>
+    <section id="itinerary" class="section active">Itinerary will go here</section>
+    <section id="decks" class="section">Deck plans will go here</section>
+    <section id="emergency" class="section">Emergency contacts will go here</section>
   </main>
   <footer class="footer">
-    <img src="/assets/images/ship.png" alt="Ship" class="footer-image">
+    <img src="assets/images/ship.png" alt="Ship" class="footer-image">
   </footer>
   <script src="app.js"></script>
   <script>
