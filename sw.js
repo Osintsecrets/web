@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cruise-dashboard-v5';
+const CACHE_NAME = 'cruise-dashboard-v7';
 const CORE_ASSETS = [
   './','./index.html','./styles.css','./app.js','./manifest.json',
   './assets/images/logo.png','./assets/images/ship.png',
