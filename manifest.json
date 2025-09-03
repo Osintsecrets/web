@@ -1,13 +1,13 @@
 {
   "name": "Cruise Dashboard",
   "short_name": "Cruise",
-  "start_url": "/index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "/assets/images/logo.png",
+      "src": "assets/images/logo.png",
       "sizes": "192x192",
       "type": "image/png"
     }

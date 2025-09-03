@@ -8,23 +8,46 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header">
-    <h1>Cruise Dashboard</h1>
-    <img src="assets/images/logo.png" alt="Cruise Logo" class="logo">
-  </header>
-  <nav class="nav-bar">
-    <button class="nav-button" data-target="itinerary">Itinerary</button>
-    <button class="nav-button" data-target="decks">Deck Plans</button>
-    <button class="nav-button" data-target="emergency">Emergency</button>
-  </nav>
-  <main class="main-content">
-    <section id="itinerary" class="section active">Itinerary will go here</section>
-    <section id="decks" class="section">Deck plans will go here</section>
-    <section id="emergency" class="section">Emergency contacts will go here</section>
-  </main>
-  <footer class="footer">
-    <img src="assets/images/ship.png" alt="Ship" class="footer-image">
-  </footer>
+  <div class="container">
+    <header class="header">
+      <h1>CRUISE DASHBOARD</h1>
+      <img src="assets/images/logo.png" alt="Cruise Logo" class="logo">
+    </header>
+    <nav class="nav-bar">
+      <button class="nav-button">Itinerary</button>
+      <button class="nav-button">Floor plan</button>
+      <button class="nav-button">important info</button>
+      <button class="nav-button pill--disabled" aria-disabled="true"></button>
+    </nav>
+    <section id="timeline" class="timeline">
+      <ul class="timeline-list">
+        <li class="event">
+          Sun, Oct 19, 2025 — Haifa (Israel)<br>
+          Departs 13:30
+        </li>
+        <li class="arrow">↓</li>
+        <li class="duration">25 hours and 10 minutes</li>
+        <li class="event">
+          Mon, Oct 20 — Rhodes (Greece)<br>
+          Arrives 15:30
+        </li>
+        <li class="arrow">↓</li>
+        <li class="duration">10 hours and 45 minutes</li>
+        <li class="event">
+          Tue, Oct 21 — Agios Nikolaos,<br>
+          Crete (Greece)<br>
+          Arrives 12:00
+        </li>
+        <li class="arrow">↓</li>
+        <li class="duration">34 hours</li>
+        <li class="event">
+          Thu, Oct 23 — Haifa (Israel)<br>
+          Arrives 08:00.
+        </li>
+      </ul>
+    </section>
+    <img src="assets/images/ship.png" alt="Ship" class="ship-image">
+  </div>
   <script src="app.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
