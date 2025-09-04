@@ -41,3 +41,9 @@ header{ position:relative; display:flex; align-items:center; justify-content:cen
 .event { line-height:1.5; margin-bottom:24px; }
 .arrow { font-size:24px; color:#0d5bd7; margin-bottom:8px; }
 .duration { font-weight:600; color:#0d5bd7; margin-bottom:24px; }
+
+.table-container{ overflow-x:auto; margin:20px 0; }
+.info-table{ border-collapse:collapse; width:100%; min-width:600px; }
+.info-table th, .info-table td{ border:1px solid #ccc; padding:8px; text-align:left; vertical-align:top; }
+.info-table th{ background:#0d5bd7; color:#fff; }
+.info-table tr:nth-child(even){ background:#f9f9f9; }
