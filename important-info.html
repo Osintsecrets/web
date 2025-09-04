@@ -59,8 +59,8 @@
       <span class="hamburger__bar"></span>
       <span class="hamburger__bar"></span>
     </button>
-    <h1 class="title" data-i18n="title">Cruise Dashboard</h1>
-    <button id="langToggle" class="lang-toggle" type="button" data-i18n="lang.toggle">עברית / English</button>
+    <h1 class="title"><span data-i18n="title">Cruise Dashboard</span></h1>
+    <button id="langToggle" class="lang-toggle" type="button" data-i18n="btn.lang">עברית / English</button>
   </header>
 
   <div id="overlay" class="overlay" hidden></div>
@@ -71,16 +71,16 @@
       <button id="closeMenuBtn" class="close-btn" aria-label="Close menu">✕</button>
     </div>
     <nav class="side-menu__nav">
-      <a class="menu-link" href="index.html" data-i18n="menu.home">Home</a>
-      <a class="menu-link" href="itinerary.html" id="nav-itinerary" data-i18n="menu.itinerary">Itinerary</a>
-      <a class="menu-link" href="floor-plan.html" id="nav-floor" data-i18n="menu.floor">Floor plan</a>
-      <a class="menu-link" href="important-info.html" id="nav-info" data-i18n="menu.info">important info</a>
+      <a class="menu-link" href="index.html"><span data-i18n="nav.home">Home</span></a>
+      <a class="menu-link" href="itinerary.html" id="nav-itinerary"><span data-i18n="nav.itinerary">Itinerary</span></a>
+      <a class="menu-link" href="floor-plan.html" id="nav-floor"><span data-i18n="nav.floor">Floor plan</span></a>
+      <a class="menu-link" href="important-info.html" id="nav-info"><span data-i18n="nav.info">important info</span></a>
     </nav>
     <hr class="menu-sep">
     <div class="side-menu__actions">
-      <button id="refreshBtn" class="menu-action" data-i18n="menu.refresh">Refresh</button>
-      <button id="installBtn" class="menu-action menu-action--primary" hidden data-i18n="menu.install">Install (Android)</button>
-      <button id="showA2HS" class="menu-action" data-i18n="menu.a2hs">How to Add to Home Screen (Android)</button>
+      <button id="refreshBtn" class="menu-action"><span data-i18n="btn.refresh">Refresh</span></button>
+      <button id="installBtn" class="menu-action menu-action--primary" hidden><span data-i18n="btn.install">Install (Android)</span></button>
+      <button id="showA2HS" class="menu-action"><span data-i18n="btn.a2hs">How to Add to Home Screen (Android)</span></button>
       <div id="a2hsHelp" class="a2hs-help" hidden>
         <ol>
           <li>Open this site in <strong>Chrome</strong> on your Android phone.</li>
@@ -97,79 +97,79 @@
       <h2 data-i18n="info.h2">Important Phone Numbers</h2>
 
       <details class="acc" open>
-        <summary class="acc__summary">Greece — Nationwide</summary>
+        <summary class="acc__summary" data-i18n="cat.gr">Greece — Nationwide</summary>
         <ul class="acc__list">
-          <li><strong>Emergency (EU-wide):</strong> <a href="tel:112">112</a></li>
-          <li><strong>Ambulance (EKAB):</strong> <a href="tel:166">166</a></li>
-          <li><strong>Fire Department:</strong> <a href="tel:199">199</a></li>
-          <li><strong>Police:</strong> <a href="tel:100">100</a></li>
-          <li><strong>Anti-drug Police:</strong> <a href="tel:109">109</a></li>
-          <li><strong>Coast Guard:</strong> <a href="tel:108">108</a></li>
-          <li><strong>Tourist Police (nationwide):</strong> <a href="tel:171">171</a></li>
-          <li><strong>Pharmacies:</strong> <a href="tel:107">107</a></li>
-          <li><strong>Hospitals (directory):</strong> <a href="tel:106">106</a></li>
-          <li><strong>Forest Fire Authority:</strong> <a href="tel:191">191</a></li>
-          <li><strong>Traffic Police (general):</strong> <a href="tel:10400">10400</a></li>
-          <li><strong>Weather Service:</strong> <a href="tel:148">148</a></li>
-          <li><strong>International Phone Assistance:</strong> <a href="tel:139">139</a></li>
-          <li><strong>General Telephone Information:</strong> <a href="tel:11888">11888</a></li>
+          <li><strong data-i18n="lbl.emergency">Emergency (EU-wide)</strong>: <a href="tel:112">112</a></li>
+          <li><strong data-i18n="lbl.ambulance">Ambulance (EKAB)</strong>: <a href="tel:166">166</a></li>
+          <li><strong data-i18n="lbl.fire">Fire Department</strong>: <a href="tel:199">199</a></li>
+          <li><strong data-i18n="lbl.police">Police</strong>: <a href="tel:100">100</a></li>
+          <li><strong data-i18n="lbl.antidrug">Anti-drug Police</strong>: <a href="tel:109">109</a></li>
+          <li><strong data-i18n="lbl.coast">Coast Guard</strong>: <a href="tel:108">108</a></li>
+          <li><strong data-i18n="lbl.tourist">Tourist Police</strong>: <a href="tel:171">171</a></li>
+          <li><strong data-i18n="lbl.pharm">Pharmacies</strong>: <a href="tel:107">107</a></li>
+          <li><strong data-i18n="lbl.hospdir">Hospitals (directory)</strong>: <a href="tel:106">106</a></li>
+          <li><strong data-i18n="lbl.forest">Forest Fire Authority</strong>: <a href="tel:191">191</a></li>
+          <li><strong data-i18n="lbl.traffic">Traffic Police (general)</strong>: <a href="tel:10400">10400</a></li>
+          <li><strong data-i18n="lbl.weather">Weather Service</strong>: <a href="tel:148">148</a></li>
+          <li><strong data-i18n="lbl.intlassist">International Phone Assistance</strong>: <a href="tel:139">139</a></li>
+          <li><strong data-i18n="lbl.teleinfo">General Telephone Information</strong>: <a href="tel:11888">11888</a></li>
         </ul>
       </details>
 
       <details class="acc">
-        <summary class="acc__summary">Rhodes (Island)</summary>
+        <summary class="acc__summary" data-i18n="cat.rh">Rhodes (Island)</summary>
         <ul class="acc__list">
-          <li><strong>Police Emergency:</strong> <a href="tel:100">100</a></li>
-          <li><strong>Fire Service:</strong> <a href="tel:199">199</a></li>
-          <li><strong>Ambulance:</strong> <a href="tel:166">166</a></li>
-          <li><strong>Forestry Fire Service:</strong> <a href="tel:1591">1591</a></li>
-          <li><strong>Tourist Police:</strong> <a href="tel:+302241027423">+30 22410 27423</a> / <a href="tel:+302241023329">23329</a> or <a href="tel:171">171</a></li>
-          <li><strong>Hospital of Rhodes:</strong> <a href="tel:+302241360000">+30 22413 60000</a></li>
+          <li><strong data-i18n="lbl.police.em">Police Emergency</strong>: <a href="tel:100">100</a></li>
+          <li><strong data-i18n="lbl.fire.service">Fire Service</strong>: <a href="tel:199">199</a></li>
+          <li><strong data-i18n="lbl.ambulance.short">Ambulance</strong>: <a href="tel:166">166</a></li>
+          <li><strong data-i18n="lbl.forestry.fire">Forestry Fire Service</strong>: <a href="tel:1591">1591</a></li>
+          <li><strong data-i18n="lbl.tourist">Tourist Police</strong>: <a href="tel:+302241027423">+30 22410 27423</a> / <a href="tel:+302241023329">23329</a> or <a href="tel:171">171</a></li>
+          <li><strong data-i18n="lbl.hospital.rh">Hospital of Rhodes</strong>: <a href="tel:+302241360000">+30 22413 60000</a></li>
         </ul>
       </details>
 
       <details class="acc">
-        <summary class="acc__summary">Crete (Island)</summary>
+        <summary class="acc__summary" data-i18n="cat.cr">Crete (Island)</summary>
         <ul class="acc__list">
-          <li><strong>Emergency (national):</strong> <a href="tel:112">112</a></li>
-          <li><strong>Police:</strong> <a href="tel:100">100</a></li>
-          <li><strong>Fire Brigade:</strong> <a href="tel:199">199</a></li>
-          <li><strong>Ambulance:</strong> <a href="tel:166">166</a></li>
-          <li><strong>Doctors SOS:</strong> <a href="tel:1016">1016</a></li>
-          <li><strong>Drug Squad:</strong> <a href="tel:109">109</a></li>
-          <li><strong>Medical Advice:</strong> <a href="tel:197">197</a></li>
-          <li><strong>OTE (Telecom):</strong> <a href="tel:134">134</a></li>
+          <li><strong data-i18n="lbl.emergency">Emergency (EU-wide)</strong>: <a href="tel:112">112</a></li>
+          <li><strong data-i18n="lbl.police">Police</strong>: <a href="tel:100">100</a></li>
+          <li><strong data-i18n="lbl.firebrigade">Fire Brigade</strong>: <a href="tel:199">199</a></li>
+          <li><strong data-i18n="lbl.ambulance.short">Ambulance</strong>: <a href="tel:166">166</a></li>
+          <li><strong data-i18n="lbl.doctors">Doctors SOS</strong>: <a href="tel:1016">1016</a></li>
+          <li><strong data-i18n="lbl.drugsquad">Drug Squad</strong>: <a href="tel:109">109</a></li>
+          <li><strong data-i18n="lbl.medadv">Medical Advice</strong>: <a href="tel:197">197</a></li>
+          <li><strong data-i18n="lbl.ote">OTE (Telecom)</strong>: <a href="tel:134">134</a></li>
         </ul>
       </details>
 
       <details class="acc">
-        <summary class="acc__summary">U.S. Embassy – Athens</summary>
+        <summary class="acc__summary" data-i18n="cat.us.ath">U.S. Embassy – Athens</summary>
         <ul class="acc__list">
-          <li><strong>Address:</strong> 91 Vasilisis Sophias Ave, 10160 Athens, Greece</li>
+          <li><strong data-i18n="lbl.addr">Address</strong>: 91 Vasilisis Sophias Ave, 10160 Athens, Greece</li>
           <li><strong>Main:</strong> <a href="tel:+302107212951">+30 210 721 2951</a></li>
           <li><strong>Emergency After-Hours:</strong> <a href="tel:+302107294444">+30 210 729 4444</a> / <a href="tel:+302107294301">+30 210 729 4301</a></li>
         </ul>
       </details>
 
       <details class="acc">
-        <summary class="acc__summary">U.S. Consulate – Thessaloniki</summary>
+        <summary class="acc__summary" data-i18n="cat.us.th">U.S. Consulate – Thessaloniki</summary>
         <ul class="acc__list">
-          <li><strong>Address:</strong> 43 Tsimiski, 7th Floor, 54623 Thessaloniki, Greece</li>
+          <li><strong data-i18n="lbl.addr">Address</strong>: 43 Tsimiski, 7th Floor, 54623 Thessaloniki, Greece</li>
         </ul>
       </details>
 
       <details class="acc">
-        <summary class="acc__summary">Israeli Embassy – Athens</summary>
+        <summary class="acc__summary" data-i18n="cat.il.ath">Israeli Embassy – Athens</summary>
         <ul class="acc__list">
-          <li><strong>Address:</strong> Leof. Marathonodromon 1, 154 52 Paleo Psichiko, Athens, Greece</li>
-          <li><strong>Phone:</strong> <a href="tel:+302106705500">+30 210 670 5500</a></li>
+          <li><strong data-i18n="lbl.addr">Address</strong>: Leof. Marathonodromon 1, 154 52 Paleo Psichiko, Athens, Greece</li>
+          <li><strong data-i18n="lbl.phone">Phone</strong>: <a href="tel:+302106705500">+30 210 670 5500</a></li>
         </ul>
       </details>
 
       <details class="acc">
-        <summary class="acc__summary">Chabad of Athens (Greece)</summary>
+        <summary class="acc__summary" data-i18n="cat.chabad">Chabad of Athens (Greece)</summary>
         <ul class="acc__list">
-          <li><strong>Address:</strong> Aisopou 10, Athens 10554, Greece</li>
+          <li><strong data-i18n="lbl.addr">Address</strong>: Aisopou 10, Athens 10554, Greece</li>
         </ul>
       </details>
     </section>

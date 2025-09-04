@@ -59,8 +59,8 @@
       <span class="hamburger__bar"></span>
       <span class="hamburger__bar"></span>
     </button>
-    <h1 class="title" data-i18n="title">Cruise Dashboard</h1>
-    <button id="langToggle" class="lang-toggle" type="button" data-i18n="lang.toggle">עברית / English</button>
+    <h1 class="title"><span data-i18n="title">Cruise Dashboard</span></h1>
+    <button id="langToggle" class="lang-toggle" type="button" data-i18n="btn.lang">עברית / English</button>
   </header>
 
   <div id="overlay" class="overlay" hidden></div>
@@ -71,16 +71,16 @@
       <button id="closeMenuBtn" class="close-btn" aria-label="Close menu">✕</button>
     </div>
     <nav class="side-menu__nav">
-      <a class="menu-link" href="index.html" data-i18n="menu.home">Home</a>
-      <a class="menu-link" href="itinerary.html" id="nav-itinerary" data-i18n="menu.itinerary">Itinerary</a>
-      <a class="menu-link" href="floor-plan.html" id="nav-floor" data-i18n="menu.floor">Floor plan</a>
-      <a class="menu-link" href="important-info.html" id="nav-info" data-i18n="menu.info">important info</a>
+      <a class="menu-link" href="index.html"><span data-i18n="nav.home">Home</span></a>
+      <a class="menu-link" href="itinerary.html" id="nav-itinerary"><span data-i18n="nav.itinerary">Itinerary</span></a>
+      <a class="menu-link" href="floor-plan.html" id="nav-floor"><span data-i18n="nav.floor">Floor plan</span></a>
+      <a class="menu-link" href="important-info.html" id="nav-info"><span data-i18n="nav.info">important info</span></a>
     </nav>
     <hr class="menu-sep">
     <div class="side-menu__actions">
-      <button id="refreshBtn" class="menu-action" data-i18n="menu.refresh">Refresh</button>
-      <button id="installBtn" class="menu-action menu-action--primary" hidden data-i18n="menu.install">Install (Android)</button>
-      <button id="showA2HS" class="menu-action" data-i18n="menu.a2hs">How to Add to Home Screen (Android)</button>
+      <button id="refreshBtn" class="menu-action"><span data-i18n="btn.refresh">Refresh</span></button>
+      <button id="installBtn" class="menu-action menu-action--primary" hidden><span data-i18n="btn.install">Install (Android)</span></button>
+      <button id="showA2HS" class="menu-action"><span data-i18n="btn.a2hs">How to Add to Home Screen (Android)</span></button>
       <div id="a2hsHelp" class="a2hs-help" hidden>
         <ol>
           <li>Open this site in <strong>Chrome</strong> on your Android phone.</li>
@@ -93,6 +93,7 @@
   </aside>
 
   <main class="main-content container">
+    <h2 data-i18n="home.h2">Cruise Dashboard</h2>
     <section id="timeline" class="timeline">
       <ul class="timeline-list">
         <li class="event">
@@ -120,10 +121,7 @@
         </li>
       </ul>
     </section>
-    <p class="haifa-reminder">
-      <strong>Tip:</strong> Before you leave the Port of Haifa, add this site to your phone’s Home screen so you can access it offline.
-      Whenever you have internet, open the menu and tap <em>Refresh</em> to get updates.
-    </p>
+    <p class="haifa-reminder" data-i18n="home.tip">Tip: Before you leave the Port of Haifa, add this site to your Home screen so you can access it offline. Whenever you have internet, open the menu and tap Refresh to get updates.</p>
   </main>
 
   <footer>

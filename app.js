@@ -11,13 +11,15 @@
   const updateToast = document.getElementById('updateToast');
   const langToggle = document.getElementById('langToggle');
 
-  // ===== i18n =====
+  // Simple i18n store
   const I18N = { lang: 'en', dict: {} };
+
+  function t(key){ return I18N.dict[key] || key; }
 
   function detectInitialLang(){
     const saved = localStorage.getItem('lang');
     if (saved) return saved;
-    return /^he\b/i.test(navigator.language || '') ? 'he' : 'en';
+    return /^he\b/i.test(navigator.language||'') ? 'he' : 'en';
   }
 
   async function loadLang(lang){
@@ -27,31 +29,27 @@
       I18N.lang = lang;
       localStorage.setItem('lang', lang);
       applyI18N();
-      applyDir(lang);
-    }catch(_){ /* fail silently, keep existing text */ }
+    }catch(_){ }
   }
 
-  function applyDir(lang){
-    const dir = (lang === 'he') ? 'rtl' : 'ltr';
-    document.documentElement.setAttribute('dir', dir);
-    document.body.setAttribute('dir', dir);
-  }
-
-  function applyI18N(root = document){
+  function applyI18N(root=document){
+    // Swap all text nodes marked with data-i18n
     root.querySelectorAll('[data-i18n]').forEach(el=>{
       const key = el.getAttribute('data-i18n');
-      if (I18N.dict[key]) el.textContent = I18N.dict[key];
+      const val = I18N.dict[key];
+      if (val) el.textContent = val;
     });
   }
 
-  // init
+  // init + toggle
   loadLang(detectInitialLang());
-
-  // toggle
   langToggle?.addEventListener('click', ()=>{
     const next = (I18N.lang === 'he') ? 'en' : 'he';
     loadLang(next);
   });
+
+  // Expose t() for other renderers (e.g., deck titles)
+  window.__t = t;
 
   let lastFocus = null;
 
@@ -227,7 +225,7 @@
 
         const header = document.createElement('div');
         header.className = 'deck-card__header';
-        header.textContent = `${name}`;
+        header.textContent = `${window.__t('deck.label')} ${name.split(' ')[1]}`;
 
         const media = document.createElement('div');
         media.className = 'deck-card__media';
