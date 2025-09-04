@@ -274,3 +274,23 @@
 if('serviceWorker' in navigator){
   window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js'));
 }
+
+/* — Global footer signature on every page — */
+(() => {
+  try {
+    const main = document.querySelector('main.content') || document.querySelector('main') || document.body;
+    if (!main) return;
+    // Avoid duplicating if re-run
+    if (document.querySelector('.site-signature')) return;
+
+    const footer = document.createElement('footer');
+    footer.className = 'site-signature';
+    // Use i18n if available
+    const createdKeyEl = document.querySelector('[data-i18n="created_by"]');
+    const text = createdKeyEl ? createdKeyEl.textContent : 'created by Jeremiah';
+    footer.textContent = text;
+
+    // Append at the bottom of the main content
+    main.appendChild(footer);
+  } catch {}
+})();
