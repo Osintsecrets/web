@@ -59,5 +59,8 @@
   "currency_disclaimer": "הכלי מושך את שער החליפין EUR↔ILS כאשר יש חיבור ומאחסן אותו לשימוש גם במצב לא מקוון. כדי לעדכן לשער החדש כשיש חיבור, רעננו את הדף/האפליקציה.",
   "currency_converted": "תוצאה:",
   "currency_rate": "שער (אירו→שקל):",
-  "currency_last_updated": "עודכן לאחרונה:"
+  "currency_last_updated": "עודכן לאחרונה:",
+  "last_refreshed": "עודכן לאחרונה:",
+  "never": "אף פעם",
+  "created_by": "נוצר על־ידי Jeremiah"
 }

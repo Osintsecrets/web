@@ -78,9 +78,13 @@
           <a class="menu-link" href="ports.html" id="nav-ports"><span data-i18n="nav_ports">Ports</span></a>
     </nav>
     <hr class="menu-sep">
-    <div class="side-menu__actions">
-      <button id="refreshBtn" class="menu-action"><span data-i18n="btn.refresh">Refresh</span></button>
-      <button id="installBtn" class="menu-action menu-action--primary" hidden><span data-i18n="btn.install">Install (Android)</span></button>
+      <div class="side-menu__actions">
+        <button id="refreshBtn" class="menu-action"><span data-i18n="btn.refresh">Refresh</span></button>
+        <div class="refresh-status">
+          <span class="label" data-i18n="last_refreshed">Last refreshed:</span>
+          <span id="lastRefreshedValue" class="value" data-i18n-fallback="never">Never</span>
+        </div>
+        <button id="installBtn" class="menu-action menu-action--primary" hidden><span data-i18n="btn.install">Install (Android)</span></button>
       <button id="showA2HS" class="menu-action"><span data-i18n="btn.a2hs">How to Add to Home Screen (Android)</span></button>
       <div id="a2hsHelp" class="a2hs-help" hidden>
         <ol>
@@ -105,6 +109,9 @@
   </footer>
 
   <div id="updateToast" role="status" aria-live="polite" aria-atomic="true" data-i18n="toast.updated">Updated! You’re on the latest version.</div>
+  <span data-i18n="created_by" hidden></span>
+  <span data-i18n="never" hidden></span>
+  <script defer src="refresh-status.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

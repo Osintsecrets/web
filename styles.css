@@ -315,3 +315,24 @@ body[dir="rtl"] .hamburger{ left:auto; right:10px; }
 .currency-row select, .currency-row button { padding:0.6rem; border:1px solid #ddd; border-radius:10px; background:#fff; }
 .currency-meta { margin-top:0.5rem; font-size:0.9rem; color:#555; }
 .currency-meta .rate { font-weight:600; }
+
+/* Refresh status row (Home) */
+.refresh-status {
+  margin: 0.5rem 1rem 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  display: flex;
+  gap: 0.35rem;
+  align-items: baseline;
+}
+.refresh-status .label { opacity: 0.9; }
+.refresh-status .value { font-weight: 600; color: #444; }
+
+/* Footer signature (bottom of every page) */
+.site-signature {
+  margin: 1.2rem auto 1.4rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #9aa0a6; /* subtle gray */
+  opacity: 0.9;
+}

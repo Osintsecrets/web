@@ -59,5 +59,8 @@
   "currency_disclaimer": "This tool fetches the latest EUR↔ILS rate when you're online and stores it for offline use. To update to the newest rate when connected, refresh the page/app.",
   "currency_converted": "Converted:",
   "currency_rate": "Rate (EUR→ILS):",
-  "currency_last_updated": "Last updated:"
+  "currency_last_updated": "Last updated:",
+  "last_refreshed": "Last refreshed:",
+  "never": "Never",
+  "created_by": "created by Jeremiah"
 }
