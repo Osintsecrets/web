@@ -229,3 +229,29 @@ body{ font-size:18px; }
 #updateToast.show{ opacity:1; }
 
 /* Touch target sizing for menu links/actions already handled by pill/menu-action styles */
+/* Deck grid (floor plans) */
+.deck-grid{ display:grid; grid-template-columns:1fr; gap:12px; margin-top:12px; }
+@media (min-width: 520px){ .deck-grid{ grid-template-columns:1fr 1fr; } }
+
+.deck-card{
+  display:block; border:1px solid #e6e6e6; border-radius:12px; background:#fff;
+  text-decoration:none; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,.04);
+}
+.deck-card__header{
+  padding:12px 14px; background:#0d5bd7; color:#fff; font-weight:700; font-size:16px;
+}
+.deck-card__media{ position:relative; padding:12px; background:#fafafa; }
+.deck-card__img{
+  width:100%; height:auto; display:block; border-radius:8px; background:#f0f2f5;
+}
+
+/* skeleton when image missing */
+.deck-card.skeleton .deck-card__media{
+  background:linear-gradient(90deg,#f4f4f4 25%,#ececec 37%,#f4f4f4 63%);
+  background-size:400% 100%; animation:deckShimmer 1.2s ease-in-out infinite;
+  height:110px;
+}
+@keyframes deckShimmer{
+  0%{ background-position:100% 0 }
+  100%{ background-position:0 0 }
+}
