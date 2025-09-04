@@ -150,6 +150,70 @@
     }catch(_){ }
   })();
 
+  /* ===== Floor plans placeholder/auto loader ===== */
+  (function renderDeckGrid(){
+    const grid = document.getElementById('decksGrid');
+    if(!grid) return;
+
+    // Configure the decks you want to show as cards (titles only; images optional)
+    const DECKS = [
+      'Deck 03', 'Deck 04', 'Deck 05', 'Deck 06',
+      'Deck 07', 'Deck 08', 'Deck 09', 'Deck 10', 'Deck 11'
+    ];
+
+    // Helper to check if an image exists
+    function imageExists(src){
+      return new Promise(resolve=>{
+        const img = new Image();
+        img.onload = ()=> resolve(true);
+        img.onerror = ()=> resolve(false);
+        img.src = src;
+      });
+    }
+
+    // Build all cards
+    (async () => {
+      for (const name of DECKS){
+        const path = `assets/images/${name}.png`;     // e.g., assets/images/Deck 03.png
+
+        // shell
+        const card = document.createElement('a');
+        card.className = 'deck-card skeleton';  // start skeleton state
+        card.href = 'javascript:void(0)';
+        card.setAttribute('aria-label', `${name} deck plan`);
+
+        const header = document.createElement('div');
+        header.className = 'deck-card__header';
+        header.textContent = `${name}`;
+
+        const media = document.createElement('div');
+        media.className = 'deck-card__media';
+
+        const img = document.createElement('img');
+        img.className = 'deck-card__img';
+        img.alt = `${name} plan`;
+
+        media.appendChild(img);
+        card.appendChild(header);
+        card.appendChild(media);
+        grid.appendChild(card);
+
+        // check file
+        const exists = await imageExists(path);
+        if (exists){
+          img.src = path;
+          card.classList.remove('skeleton');
+          card.href = path;
+          card.target = '_blank';
+          card.rel = 'noopener';
+        } else {
+          // leave skeleton, keep card non-clickable
+          img.remove(); // keep the shimmering block instead of a broken image icon
+        }
+      }
+    })();
+  })();
+
 })();
 
 // SW registration (all pages)
