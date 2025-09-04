@@ -1,14 +1,32 @@
 {
   "items": [
-    // Example (fill later in Haifa):
-    // {
-    //   "when": "Sun, Oct 19 — Haifa (Israel)",
-    //   "note": "Departs 13:30"
-    // },
-    // { "gap": "25 hours 10 min" },
-    // {
-    //   "when": "Mon, Oct 20 — Rhodes (Greece)",
-    //   "note": "Arrives 15:30"
-    // }
+    {
+      "when_en": "Sun, Oct 19, 2025 — Haifa (Israel)",
+      "when_he": "יום א׳, 19 באוקטובר 2025 — חיפה (ישראל)",
+      "note_en": "Departs 13:30",
+      "note_he": "יציאה 13:30"
+    },
+    { "gap_en": "25 hours and 10 minutes", "gap_he": "25 שעות ו-10 דקות" },
+    {
+      "when_en": "Mon, Oct 20 — Rhodes (Greece)",
+      "when_he": "יום ב׳, 20 באוקטובר — רודוס (יוון)",
+      "note_en": "Arrives 15:30",
+      "note_he": "הגעה 15:30"
+    },
+    { "gap_en": "10 hours and 45 minutes", "gap_he": "10 שעות ו-45 דקות" },
+    {
+      "when_en": "Tue, Oct 21 — Agios Nikolaos, Crete (Greece)",
+      "when_he": "יום ג׳, 21 באוקטובר — אגיוס ניקולאוס, כרתים (יוון)",
+      "note_en": "Arrives 12:00",
+      "note_he": "הגעה 12:00"
+    },
+    { "gap_en": "34 hours", "gap_he": "34 שעות" },
+    {
+      "when_en": "Thu, Oct 23 — Haifa (Israel)",
+      "when_he": "יום ה׳, 23 באוקטובר — חיפה (ישראל)",
+      "note_en": "Arrives 08:00",
+      "note_he": "הגעה 08:00"
+    }
   ]
 }
+
