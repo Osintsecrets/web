@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cruise-dashboard-v12';
+const CACHE_NAME = 'cruise-dashboard-v13';
 
 self.addEventListener('message', (event) => {
   if (event.data?.type === 'SKIP_WAITING') self.skipWaiting();
@@ -9,17 +9,11 @@ self.addEventListener('install', (event) => {
     const cache = await caches.open(CACHE_NAME);
     await cache.addAll([
       './',
-      './index.html',
-      './itinerary.html',
-      './floor-plan.html',
-      './important-info.html',
-      './styles.css',
-      './app.js',
-      './manifest.json',
-      './assets/images/ship.png',
-      './assets/images/logo.png',
-      './assets/images/icons/icon-192.png',
-      './assets/images/icons/icon-512.png'
+      './index.html','./itinerary.html','./floor-plan.html','./important-info.html',
+      './styles.css','./app.js','./manifest.json',
+      './data/itinerary.json','./data/decks.json',
+      './assets/images/ship.png','./assets/images/logo.png',
+      './assets/images/icons/icon-192.png','./assets/images/icons/icon-512.png'
     ]);
     self.skipWaiting();
   })());
@@ -33,30 +27,32 @@ self.addEventListener('activate', (event) => {
   })());
 });
 
-// HTML: network-first; assets: cache-first
+// HTML: network-first; assets/data: cache-first
 self.addEventListener('fetch', (event) => {
   const req = event.request;
-
   if (req.destination === 'document') {
-    // Pages (HTML) → network-first with cache fallback
-    event.respondWith(
-      fetch(req).then((res) => {
-        const copy = res.clone();
-        caches.open(CACHE_NAME).then((cache) => cache.put(req, copy));
-        return res;
-      }).catch(() => caches.match(req) || caches.match('./index.html'))
-    );
-  } else if (['style', 'script', 'image', 'manifest'].includes(req.destination)) {
-    // Assets → cache-first with network fallback (then update cache)
-    event.respondWith(
-      caches.match(req).then((cached) =>
-        cached ||
-        fetch(req).then((res) => {
-          const copy = res.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(req, copy));
-          return res;
-        })
-      )
-    );
+    event.respondWith((async () => {
+      try {
+        const fresh = await fetch(req);
+        const cache = await caches.open(CACHE_NAME);
+        cache.put(req, fresh.clone());
+        return fresh;
+      } catch (_) {
+        return (await caches.match(req)) || (await caches.match('./index.html'));
+      }
+    })());
+  } else if (['style','script','image','manifest'].includes(req.destination) || req.url.endsWith('.json')) {
+    event.respondWith((async () => {
+      const cached = await caches.match(req);
+      if (cached) return cached;
+      try {
+        const fresh = await fetch(req);
+        const cache = await caches.open(CACHE_NAME);
+        cache.put(req, fresh.clone());
+        return fresh;
+      } catch (_){
+        return new Response('', {status:504});
+      }
+    })());
   }
 });

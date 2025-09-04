@@ -3,6 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cruise Dashboard">
+  <meta property="og:title" content="Cruise Dashboard">
+  <meta property="og:description" content="All cruise info, schedules and contacts — offline-ready.">
+  <meta property="og:image" content="https://osintsecrets.github.io/web/assets/images/logo.png">
+  <meta property="og:url" content="https://osintsecrets.github.io/web/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cruise Dashboard">
+  <meta name="twitter:description" content="All cruise info, schedules and contacts — offline-ready.">
+  <meta name="twitter:image" content="https://osintsecrets.github.io/web/assets/images/logo.png">
+  <!-- iOS PWA niceties -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>Floor Plan • Cruise Dashboard</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0d5bd7">
@@ -47,14 +61,19 @@
     </div>
   </aside>
 
-  <main class="main-content container">
-    <p>Add deck images to assets/images/ as deck-*.png|jpg|gif. They will be displayed here in the next step.</p>
+  <main class="main-content">
+    <section class="container">
+      <h2>Deck Plans</h2>
+      <p class="muted">Upload images to <code>assets/images/decks/</code> and list them in <code>data/decks.json</code>. They will appear here automatically.</p>
+      <div id="decksRoot" class="deck-grid"></div>
+    </section>
   </main>
 
   <footer>
     <img src="assets/images/ship.png" alt="Ship" class="footer-image">
   </footer>
 
+  <div id="updateToast" role="status" aria-live="polite" aria-atomic="true">Updated! You’re on the latest version.</div>
   <script src="app.js"></script>
 </body>
 </html>
