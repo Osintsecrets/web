@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cruise-dashboard-v10';
+const CACHE_NAME = 'cruise-dashboard-v11';
 const CORE_ASSETS = [
   "./","./index.html","./itinerary.html","./floor-plan.html","./important-info.html",
   "./styles.css","./app.js","./manifest.json",

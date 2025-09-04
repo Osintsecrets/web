@@ -10,22 +10,38 @@
 </head>
 <body>
   <header class="header">
+    <button id="menuBtn" class="icon-btn" aria-label="Open menu" aria-haspopup="true" aria-controls="sideMenu" aria-expanded="false">☰</button>
     <h1 class="title">FLOOR PLAN</h1>
-    <button id="refreshBtn" class="pill pill--ghost">Refresh</button>
   </header>
 
-  <nav class="nav-bar">
-    <div class="nav-left">
-      <a class="pill" href="index.html">Home</a>
-      <a class="pill" href="itinerary.html" id="nav-itinerary">Itinerary</a>
-      <a class="pill" href="floor-plan.html" id="nav-floor">Floor plan</a>
-      <a class="pill" href="important-info.html" id="nav-info">important info</a>
+  <!-- Off-canvas menu + overlay -->
+  <div id="overlay" class="overlay" hidden></div>
+  <aside id="sideMenu" class="side-menu" aria-hidden="true" role="dialog" aria-labelledby="menuHeading" tabindex="-1">
+    <div class="side-menu__header">
+      <h2 id="menuHeading">Menu</h2>
+      <button id="closeMenuBtn" class="icon-btn" aria-label="Close menu">✕</button>
     </div>
-    <div class="nav-spacer"></div>
-    <div class="nav-right">
-      <button id="installBtn" class="pill pill--primary" hidden>Install App</button>
+    <nav class="side-menu__nav">
+      <a class="menu-link" href="index.html">Home</a>
+      <a class="menu-link" href="itinerary.html">Itinerary</a>
+      <a class="menu-link" href="floor-plan.html">Floor plan</a>
+      <a class="menu-link" href="important-info.html">important info</a>
+    </nav>
+    <hr class="menu-sep">
+    <div class="side-menu__actions">
+      <button id="refreshBtn" class="menu-action">Refresh</button>
+      <button id="installBtn" class="menu-action" hidden>Install (Android)</button>
+      <button id="showA2HS" class="menu-action">How to Add to Home Screen (Android)</button>
+      <div id="a2hsHelp" class="a2hs-help" hidden>
+        <ol>
+          <li>Open this site in <strong>Chrome</strong> on your Android phone.</li>
+          <li>Tap the <strong>⋮</strong> menu (top right).</li>
+          <li>Tap <strong>Add to Home screen</strong> or <strong>Install app</strong>.</li>
+          <li>Confirm to add the app icon to your Home screen.</li>
+        </ol>
+      </div>
     </div>
-  </nav>
+  </aside>
 
   <main class="main-content">
     <p>Add deck images to assets/images/ as deck-*.png|jpg|gif. They will be displayed here in the next step.</p>
@@ -37,22 +53,6 @@
 
   <script src="app.js"></script>
   <script>
-    // Mark current page active in the nav
-    (function() {
-      const map = {
-        'itinerary.html': 'nav-itinerary',
-        'floor-plan.html': 'nav-floor',
-        'important-info.html': 'nav-info',
-        'index.html': null
-      };
-      const file = location.pathname.split('/').pop() || 'index.html';
-      const id = map[file];
-      if (id) {
-        const el = document.getElementById(id);
-        if (el) el.classList.add('pill--active');
-      }
-    })();
-    // Register SW if available
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
     }
