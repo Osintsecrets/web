@@ -197,3 +197,35 @@ body {
 }
 .info-table th { background:var(--blue); color:#fff }
 .info-table tr:nth-child(even) { background:#f9f9f9 }
+
+/* Mobile-friendly base */
+body{ font-size:18px; }
+.lead{ margin:8px 0 12px; line-height:1.5; }
+.muted{ color:var(--muted); }
+
+/* Timeline tidy-up */
+.timeline-list{ list-style:none; padding:0; margin:0; }
+.timeline-list li{ padding:10px 0; border-bottom:1px solid #eee; }
+.timeline-list .event .when{ font-weight:600; }
+.timeline-list .gap{ color:var(--blue); font-weight:600; }
+
+/* Accordion (important info) */
+.acc{ border:1px solid #ececec; border-radius:10px; padding:0; margin:10px 0; background:#fff; }
+.acc__summary{ list-style:none; padding:14px 16px; margin:0; font-weight:700; cursor:pointer; }
+.acc__summary::-webkit-details-marker{ display:none; }
+.acc[open] .acc__summary{ border-bottom:1px solid #ececec; }
+.acc__list{ margin:0; padding:10px 16px; }
+.acc__list li{ padding:8px 0; }
+.acc__list a{ color:var(--blue); text-decoration:none; }
+
+/* Deck grid */
+.deck-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px; }
+.deck-card{ display:block; border:1px solid #ececec; border-radius:12px; overflow:hidden; text-decoration:none; }
+.deck-card img{ width:100%; height:auto; display:block; }
+.deck-card__label{ padding:8px 10px; font-weight:600; color:#111; }
+
+/* Update toast */
+#updateToast{ position:fixed; left:50%; transform:translateX(-50%); bottom:16px; background:#111; color:#fff; padding:10px 14px; border-radius:9999px; opacity:0; transition:opacity .25s ease; z-index:1000; }
+#updateToast.show{ opacity:1; }
+
+/* Touch target sizing for menu links/actions already handled by pill/menu-action styles */

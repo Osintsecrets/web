@@ -3,6 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cruise Dashboard">
+  <meta property="og:title" content="Cruise Dashboard">
+  <meta property="og:description" content="All cruise info, schedules and contacts — offline-ready.">
+  <meta property="og:image" content="https://osintsecrets.github.io/web/assets/images/logo.png">
+  <meta property="og:url" content="https://osintsecrets.github.io/web/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cruise Dashboard">
+  <meta name="twitter:description" content="All cruise info, schedules and contacts — offline-ready.">
+  <meta name="twitter:image" content="https://osintsecrets.github.io/web/assets/images/logo.png">
+  <!-- iOS PWA niceties -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>Important Info • Cruise Dashboard</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0d5bd7">
@@ -47,62 +61,94 @@
     </div>
   </aside>
 
-  <main class="main-content container">
-    <div class="table-container">
+  <main class="main-content">
+    <section class="container">
       <h2>Important Phone Numbers</h2>
-      <table class="info-table">
-        <thead>
-          <tr>
-            <th>Category</th>
-            <th>Service / Location</th>
-            <th>Number / Address</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td rowspan="13"><strong>Greece — Nationwide</strong></td><td>Emergency (European-wide)</td><td>112</td></tr>
-          <tr><td>Ambulance (EKAB)</td><td>166</td></tr>
-          <tr><td>Fire Department</td><td>199</td></tr>
-          <tr><td>Police</td><td>100</td></tr>
-          <tr><td>Anti-drug Police</td><td>109</td></tr>
-          <tr><td>Coast Guard</td><td>108</td></tr>
-          <tr><td>Tourist Police (nationwide)</td><td>171</td></tr>
-          <tr><td>Pharmacies</td><td>107</td></tr>
-          <tr><td>Hospitals (directory)</td><td>106</td></tr>
-          <tr><td>Forest Fire Authority</td><td>191</td></tr>
-          <tr><td>Traffic Police (general)</td><td>10400</td></tr>
-          <tr><td>Weather Service</td><td>148</td></tr>
-          <tr><td>International Phone Assistance</td><td>139</td></tr>
-          <tr><td colspan="2">General Telephone Information</td><td>11888</td></tr>
-          <tr><td rowspan="6"><strong>Rhodes (Island)</strong></td><td>Police Emergency</td><td>100</td></tr>
-          <tr><td>Fire Service</td><td>199</td></tr>
-          <tr><td>Ambulance</td><td>166</td></tr>
-          <tr><td>Forestry Fire Service</td><td>1591</td></tr>
-          <tr><td>Tourist Police</td><td>171 or +30-22410-27423 / 23329</td></tr>
-          <tr><td>Hospital of Rhodes</td><td>+30 22413 60000</td></tr>
-          <tr><td rowspan="8"><strong>Crete (Island)</strong></td><td>Emergency (national)</td><td>112</td></tr>
-          <tr><td>Police</td><td>100</td></tr>
-          <tr><td>Fire Brigade</td><td>199</td></tr>
-          <tr><td>Ambulance</td><td>166</td></tr>
-          <tr><td>Doctors SOS</td><td>1016</td></tr>
-          <tr><td>Drug Squad</td><td>109</td></tr>
-          <tr><td>Medical Advice</td><td>197</td></tr>
-          <tr><td>OTE (Telecom service)</td><td>134</td></tr>
-          <tr><td rowspan="3"><strong>U.S. Embassy – Athens</strong></td><td>Address</td><td>91 Vasilisis Sophias Avenue, 10160 Athens, Greece</td></tr>
-          <tr><td>Main Phone</td><td>+30-210-721-2951</td></tr>
-          <tr><td>Emergency After-Hours Phone</td><td>+30-210-729-4444 or +30-210-729-4301</td></tr>
-          <tr><td><strong>U.S. Consulate – Thessaloniki</strong></td><td>Address</td><td>43 Tsimiski, 7th Floor, 54623 Thessaloniki, Greece</td></tr>
-          <tr><td rowspan="2"><strong>Israeli Embassy – Athens</strong></td><td>Address</td><td>Leoforos Marathonodromon 1 (Marathonodromou Street 1), 154 52 - Paleo Psichiko, Athens, Greece</td></tr>
-          <tr><td>Phone</td><td>+30-210-670-5500</td></tr>
-          <tr><td><strong>Chabad of Athens (Greece)</strong></td><td>Address</td><td>Aisopou 10, Athens 10554, Greece</td></tr>
-        </tbody>
-      </table>
-    </div>
+
+      <details class="acc" open>
+        <summary class="acc__summary">Greece — Nationwide</summary>
+        <ul class="acc__list">
+          <li><strong>Emergency (EU-wide):</strong> <a href="tel:112">112</a></li>
+          <li><strong>Ambulance (EKAB):</strong> <a href="tel:166">166</a></li>
+          <li><strong>Fire Department:</strong> <a href="tel:199">199</a></li>
+          <li><strong>Police:</strong> <a href="tel:100">100</a></li>
+          <li><strong>Anti-drug Police:</strong> <a href="tel:109">109</a></li>
+          <li><strong>Coast Guard:</strong> <a href="tel:108">108</a></li>
+          <li><strong>Tourist Police (nationwide):</strong> <a href="tel:171">171</a></li>
+          <li><strong>Pharmacies:</strong> <a href="tel:107">107</a></li>
+          <li><strong>Hospitals (directory):</strong> <a href="tel:106">106</a></li>
+          <li><strong>Forest Fire Authority:</strong> <a href="tel:191">191</a></li>
+          <li><strong>Traffic Police (general):</strong> <a href="tel:10400">10400</a></li>
+          <li><strong>Weather Service:</strong> <a href="tel:148">148</a></li>
+          <li><strong>International Phone Assistance:</strong> <a href="tel:139">139</a></li>
+          <li><strong>General Telephone Information:</strong> <a href="tel:11888">11888</a></li>
+        </ul>
+      </details>
+
+      <details class="acc">
+        <summary class="acc__summary">Rhodes (Island)</summary>
+        <ul class="acc__list">
+          <li><strong>Police Emergency:</strong> <a href="tel:100">100</a></li>
+          <li><strong>Fire Service:</strong> <a href="tel:199">199</a></li>
+          <li><strong>Ambulance:</strong> <a href="tel:166">166</a></li>
+          <li><strong>Forestry Fire Service:</strong> <a href="tel:1591">1591</a></li>
+          <li><strong>Tourist Police:</strong> <a href="tel:+302241027423">+30 22410 27423</a> / <a href="tel:+302241023329">23329</a> or <a href="tel:171">171</a></li>
+          <li><strong>Hospital of Rhodes:</strong> <a href="tel:+302241360000">+30 22413 60000</a></li>
+        </ul>
+      </details>
+
+      <details class="acc">
+        <summary class="acc__summary">Crete (Island)</summary>
+        <ul class="acc__list">
+          <li><strong>Emergency (national):</strong> <a href="tel:112">112</a></li>
+          <li><strong>Police:</strong> <a href="tel:100">100</a></li>
+          <li><strong>Fire Brigade:</strong> <a href="tel:199">199</a></li>
+          <li><strong>Ambulance:</strong> <a href="tel:166">166</a></li>
+          <li><strong>Doctors SOS:</strong> <a href="tel:1016">1016</a></li>
+          <li><strong>Drug Squad:</strong> <a href="tel:109">109</a></li>
+          <li><strong>Medical Advice:</strong> <a href="tel:197">197</a></li>
+          <li><strong>OTE (Telecom):</strong> <a href="tel:134">134</a></li>
+        </ul>
+      </details>
+
+      <details class="acc">
+        <summary class="acc__summary">U.S. Embassy – Athens</summary>
+        <ul class="acc__list">
+          <li><strong>Address:</strong> 91 Vasilisis Sophias Ave, 10160 Athens, Greece</li>
+          <li><strong>Main:</strong> <a href="tel:+302107212951">+30 210 721 2951</a></li>
+          <li><strong>Emergency After-Hours:</strong> <a href="tel:+302107294444">+30 210 729 4444</a> / <a href="tel:+302107294301">+30 210 729 4301</a></li>
+        </ul>
+      </details>
+
+      <details class="acc">
+        <summary class="acc__summary">U.S. Consulate – Thessaloniki</summary>
+        <ul class="acc__list">
+          <li><strong>Address:</strong> 43 Tsimiski, 7th Floor, 54623 Thessaloniki, Greece</li>
+        </ul>
+      </details>
+
+      <details class="acc">
+        <summary class="acc__summary">Israeli Embassy – Athens</summary>
+        <ul class="acc__list">
+          <li><strong>Address:</strong> Leof. Marathonodromon 1, 154 52 Paleo Psichiko, Athens, Greece</li>
+          <li><strong>Phone:</strong> <a href="tel:+302106705500">+30 210 670 5500</a></li>
+        </ul>
+      </details>
+
+      <details class="acc">
+        <summary class="acc__summary">Chabad of Athens (Greece)</summary>
+        <ul class="acc__list">
+          <li><strong>Address:</strong> Aisopou 10, Athens 10554, Greece</li>
+        </ul>
+      </details>
+    </section>
   </main>
 
   <footer>
     <img src="assets/images/ship.png" alt="Ship" class="footer-image">
   </footer>
 
+  <div id="updateToast" role="status" aria-live="polite" aria-atomic="true">Updated! You’re on the latest version.</div>
   <script src="app.js"></script>
 </body>
 </html>

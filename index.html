@@ -2,7 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cruise Dashboard">
+  <meta property="og:title" content="Cruise Dashboard">
+  <meta property="og:description" content="All cruise info, schedules and contacts — offline-ready.">
+  <meta property="og:image" content="https://osintsecrets.github.io/web/assets/images/logo.png">
+  <meta property="og:url" content="https://osintsecrets.github.io/web/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cruise Dashboard">
+  <meta name="twitter:description" content="All cruise info, schedules and contacts — offline-ready.">
+  <meta name="twitter:image" content="https://osintsecrets.github.io/web/assets/images/logo.png">
+  <!-- iOS PWA niceties -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>Cruise Dashboard</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0d5bd7">
@@ -85,6 +99,7 @@
     <img src="assets/images/ship.png" alt="Ship" class="footer-image">
   </footer>
 
+  <div id="updateToast" role="status" aria-live="polite" aria-atomic="true">Updated! You’re on the latest version.</div>
   <script src="app.js"></script>
 </body>
 </html>
