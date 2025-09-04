@@ -255,3 +255,24 @@ body{ font-size:18px; }
   0%{ background-position:100% 0 }
   100%{ background-position:0 0 }
 }
+
+/* Language toggle */
+.lang-toggle{
+  position:absolute; right:12px; top:12px;
+  background:#f4f6fb; border:1px solid #dfe3ef; padding:6px 10px;
+  border-radius:9999px; font-size:13px; color:#0d5bd7;
+}
+
+/* RTL support */
+:root[dir="rtl"] body, body[dir="rtl"] { direction: rtl; }
+:root[dir="rtl"] .title, body[dir="rtl"] .title { text-align:center; }
+
+/* Drawer from the right in RTL */
+body[dir="rtl"] .side-menu{
+  left:auto; right:0; transform:translateX(100%);
+}
+body[dir="rtl"] .side-menu.open{
+  transform:translateX(0);
+}
+body[dir="rtl"] .hamburger{ left:auto; right:10px; }
+/* Optional: flip overlay unchanged */

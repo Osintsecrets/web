@@ -59,7 +59,8 @@
       <span class="hamburger__bar"></span>
       <span class="hamburger__bar"></span>
     </button>
-    <h1 class="title">ITINERARY</h1>
+    <h1 class="title" data-i18n="title">Cruise Dashboard</h1>
+    <button id="langToggle" class="lang-toggle" type="button" data-i18n="lang.toggle">עברית / English</button>
   </header>
 
   <div id="overlay" class="overlay" hidden></div>
@@ -70,16 +71,16 @@
       <button id="closeMenuBtn" class="close-btn" aria-label="Close menu">✕</button>
     </div>
     <nav class="side-menu__nav">
-      <a class="menu-link" href="index.html">Home</a>
-      <a class="menu-link" href="itinerary.html" id="nav-itinerary">Itinerary</a>
-      <a class="menu-link" href="floor-plan.html" id="nav-floor">Floor plan</a>
-      <a class="menu-link" href="important-info.html" id="nav-info">important info</a>
+      <a class="menu-link" href="index.html" data-i18n="menu.home">Home</a>
+      <a class="menu-link" href="itinerary.html" id="nav-itinerary" data-i18n="menu.itinerary">Itinerary</a>
+      <a class="menu-link" href="floor-plan.html" id="nav-floor" data-i18n="menu.floor">Floor plan</a>
+      <a class="menu-link" href="important-info.html" id="nav-info" data-i18n="menu.info">important info</a>
     </nav>
     <hr class="menu-sep">
     <div class="side-menu__actions">
-      <button id="refreshBtn" class="menu-action">Refresh</button>
-      <button id="installBtn" class="menu-action menu-action--primary" hidden>Install (Android)</button>
-      <button id="showA2HS" class="menu-action">How to Add to Home Screen (Android)</button>
+      <button id="refreshBtn" class="menu-action" data-i18n="menu.refresh">Refresh</button>
+      <button id="installBtn" class="menu-action menu-action--primary" hidden data-i18n="menu.install">Install (Android)</button>
+      <button id="showA2HS" class="menu-action" data-i18n="menu.a2hs">How to Add to Home Screen (Android)</button>
       <div id="a2hsHelp" class="a2hs-help" hidden>
         <ol>
           <li>Open this site in <strong>Chrome</strong> on your Android phone.</li>
@@ -93,15 +94,9 @@
 
   <main class="main-content">
     <section id="itineraryRoot" class="container">
-      <h2>Itinerary & Ship Schedule</h2>
-      <p class="lead">
-        Once we are on the boat and we know meal times, events and other schedules, I’ll add them here.
-        This will be done right after check-in as soon as we have the information.
-      </p>
-      <p class="lead">
-        <strong>Important:</strong> Before leaving the Port of Haifa, open the menu and tap <em>Refresh</em>
-        so the latest info is saved to your phone. Then you’ll have it offline during the trip.
-      </p>
+      <h2 data-i18n="itinerary.h2">Itinerary & Ship Schedule</h2>
+      <p class="lead" data-i18n="itinerary.p1">Once we are on the boat and we know meal times, events and other schedules, I’ll add them here. This will be done right after check-in as soon as we have the information.</p>
+      <p class="lead" data-i18n="itinerary.p2">Important: Before leaving the Port of Haifa, open the menu and tap Refresh so the latest info is saved to your phone. Then you’ll have it offline during the trip.</p>
 
       <!-- If data/itinerary.json has items, app.js will render the schedule below: -->
       <div id="itineraryDynamic"></div>
@@ -112,7 +107,7 @@
     <img src="assets/images/ship.png" alt="Ship" class="footer-image">
   </footer>
 
-  <div id="updateToast" role="status" aria-live="polite" aria-atomic="true">Updated! You’re on the latest version.</div>
+  <div id="updateToast" role="status" aria-live="polite" aria-atomic="true" data-i18n="toast.updated">Updated! You’re on the latest version.</div>
   <script src="app.js"></script>
 </body>
 </html>
