@@ -288,3 +288,30 @@ body[dir="rtl"] .hamburger{ left:auto; right:10px; }
   background: #000;
 }
 
+/* --- Ports wiki --- */
+.page.ports .page-subtitle { margin: 0.5rem 1rem 1rem; color:#666; font-size:0.95rem; }
+.ports-list { display: grid; gap: 0.75rem; padding: 0 1rem 1rem; }
+.port-card { border:1px solid #e9e9e9; border-radius:14px; background:#fff; overflow:hidden; box-shadow:0 1px 2px rgba(0,0,0,.04); }
+.port-toggle { width:100%; text-align:left; background:#fff; border:0; padding:0.85rem 1rem; display:flex; align-items:center; justify-content:space-between; }
+.port-title-row { display:grid; gap:0.3rem; }
+.port-title { font-weight:700; font-size:1rem; }
+.port-area { color:#777; font-size:0.9rem; }
+.port-chevron { margin-left:0.5rem; transform:rotate(0deg); transition:transform .2s ease; }
+.port-card.open .port-chevron { transform:rotate(180deg); }
+.port-details { padding:0.75rem 1rem 1rem; border-top:1px solid #eee; }
+.port-section { margin-top:0.75rem; }
+.poi-list { list-style:none; margin:0.25rem 0 0; padding:0; display:grid; gap:0.5rem; }
+.poi { padding:0.6rem 0.5rem; border:1px dashed #eee; border-radius:10px; background:#fafafa; }
+.poi-head { display:flex; align-items:center; justify-content:space-between; gap:0.5rem; }
+.poi-name { font-weight:600; }
+.poi-wifi { color:#0a7; font-size:0.85rem; }
+
+/* --- Currency converter --- */
+.currency-card { border:1px solid #e9e9e9; border-radius:14px; background:#fff; box-shadow:0 1px 2px rgba(0,0,0,.04); margin:1rem; padding:1rem; }
+.currency-card h2 { margin:0 0 0.5rem; font-size:1.05rem; }
+.currency-disclaimer { color:#666; font-size:0.9rem; margin-bottom:0.75rem; }
+.currency-row { display:flex; gap:0.5rem; align-items:center; }
+.currency-row input[type="number"] { flex:1; padding:0.6rem; border:1px solid #ddd; border-radius:10px; }
+.currency-row select, .currency-row button { padding:0.6rem; border:1px solid #ddd; border-radius:10px; background:#fff; }
+.currency-meta { margin-top:0.5rem; font-size:0.9rem; color:#555; }
+.currency-meta .rate { font-weight:600; }

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Ports • Cruise Dashboard</title>
+
+    <link rel="manifest" href="manifest.json"/>
+    <link rel="icon" sizes="192x192" href="assets/images/icons/icon-192.png"/>
+    <link rel="apple-touch-icon" href="assets/images/icons/icon-192.png"/>
+
+    <meta property="og:title" content="Cruise Dashboard – Ports"/>
+    <meta property="og:image" content="assets/images/logo.png"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="./ports.html"/>
+
+    <link rel="stylesheet" href="styles.css"/>
+    <script defer src="app.js"></script>
+    <script defer src="ports.js"></script>
+  </head>
+  <body class="page ports">
+    <header class="site-header">
+      <button class="menu-toggle" aria-controls="sideMenu" aria-expanded="false"><span class="visually-hidden">Menu</span>☰</button>
+      <h1 class="site-title" data-i18n="ports_title">Ports</h1>
+      <a href="#" id="langToggle" class="lang-toggle">עברית / English</a>
+    </header>
+
+    <nav id="sideMenu" class="side-menu" hidden></nav>
+
+    <main class="content">
+      <p class="page-subtitle" data-i18n="ports_subtitle">
+        Tap a port to view nearby Wi-Fi cafés and places to visit. Distances are approximate from the cruise terminal.
+      </p>
+      <div id="portsList" class="ports-list" aria-live="polite" aria-busy="true"></div>
+    </main>
+  </body>
+</html>
