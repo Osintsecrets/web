@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cruise-dashboard-v14';
+const CACHE_NAME = 'cruise-dashboard-v15';
 
 self.addEventListener('message', (event) => {
   if (event.data?.type === 'SKIP_WAITING') self.skipWaiting();
