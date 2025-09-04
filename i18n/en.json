@@ -1,0 +1,18 @@
+{
+  "title": "Cruise Dashboard",
+  "menu.home": "Home",
+  "menu.itinerary": "Itinerary",
+  "menu.floor": "Floor plan",
+  "menu.info": "important info",
+  "menu.install": "Install (Android)",
+  "menu.a2hs": "How to Add to Home Screen (Android)",
+  "menu.refresh": "Refresh",
+  "itinerary.h2": "Itinerary & Ship Schedule",
+  "itinerary.p1": "Once we are on the boat and we know meal times, events and other schedules, I’ll add them here. This will be done right after check-in as soon as we have the information.",
+  "itinerary.p2": "Important: Before leaving the Port of Haifa, open the menu and tap Refresh so the latest info is saved to your phone. Then you’ll have it offline during the trip.",
+  "decks.h2": "Deck layouts",
+  "decks.p": "These will auto-populate as soon as the deck images are uploaded to assets/images/ named exactly Deck 03.png, Deck 04.png, …",
+  "info.h2": "Important Phone Numbers",
+  "lang.toggle": "עברית / English",
+  "toast.updated": "Updated! You’re on the latest version."
+}
