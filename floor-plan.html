@@ -94,14 +94,25 @@
 
   <main class="main-content">
     <section class="container">
-      <h2 data-i18n="decks.h2">Deck layouts</h2>
-      <p class="muted" data-i18n="decks.p">These will auto-populate as soon as the deck images are uploaded to assets/images/ named exactly Deck 03.png, Deck 04.png, …</p>
+      <h2 data-i18n="floor_title">Floor plan</h2>
+      <p class="muted" data-i18n="floor_subtitle">Tap a deck to view the map. Images will appear when available.</p>
 
-      <div id="decksGrid" class="deck-grid">
-        <!-- Cards are injected by app.js -->
+      <div id="deckGrid" class="deck-grid">
+        <!-- Cards are injected by floor.js -->
       </div>
     </section>
   </main>
+
+  <dialog id="deckViewer" class="deck-viewer">
+    <div class="viewer-stage">
+      <img id="deckImage" alt="">
+    </div>
+    <div class="viewer-meta">
+      <div id="deckViewerTitle"></div>
+      <p id="zoomHint"></p>
+      <button id="closeViewer" type="button" data-i18n="close">Close</button>
+    </div>
+  </dialog>
 
   <footer>
     <img src="assets/images/ship.png" alt="Ship" class="footer-image">
@@ -109,5 +120,6 @@
 
   <div id="updateToast" role="status" aria-live="polite" aria-atomic="true" data-i18n="toast.updated">Updated! You’re on the latest version.</div>
   <script src="app.js"></script>
+  <script src="floor.js"></script>
 </body>
 </html>

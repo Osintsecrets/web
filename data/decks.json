@@ -1,7 +1,11 @@
-{
-  "decks": [
-    // Example (fill later):
-    // { "name": "Deck 3 — Reception", "image": "assets/images/decks/deck-03.png" },
-    // { "name": "Deck 4 — Dining",    "image": "assets/images/decks/deck-04.png" }
-  ]
-}
+[
+  {"id":"03","image":"assets/images/deck 03.png","label":{"en":"Deck 03","he":"סיפון 03"}},
+  {"id":"04","image":"assets/images/deck 04.png","label":{"en":"Deck 04","he":"סיפון 04"}},
+  {"id":"05","image":"assets/images/deck 05.png","label":{"en":"Deck 05","he":"סיפון 05"}},
+  {"id":"06","image":"assets/images/deck 06.png","label":{"en":"Deck 06","he":"סיפון 06"}},
+  {"id":"07","image":"assets/images/deck 07.png","label":{"en":"Deck 07","he":"סיפון 07"}},
+  {"id":"08","image":"assets/images/deck 08.png","label":{"en":"Deck 08","he":"סיפון 08"}},
+  {"id":"09","image":"assets/images/deck 09.png","label":{"en":"Deck 09","he":"סיפון 09"}},
+  {"id":"10","image":"assets/images/deck 10.png","label":{"en":"Deck 10","he":"סיפון 10"}},
+  {"id":"11","image":"assets/images/deck 11.png","label":{"en":"Deck 11","he":"סיפון 11"}}
+]
