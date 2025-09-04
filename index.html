@@ -12,18 +12,19 @@
   <div class="container">
     <header>
       <h1>CRUISE DASHBOARD</h1>
-      <button id="refreshBtn" class="btn btn-ghost">Refresh</button>
+      <button id="refreshBtn" class="pill pill--ghost">Refresh</button>
     </header>
     <nav class="nav-bar">
       <div class="nav-left">
+        <button class="pill" data-target="itinerary">Itinerary</button>
         <button class="pill" data-target="decks">Floor plan</button>
         <button class="pill" data-target="info">important info</button>
         <button class="pill pill--disabled" disabled aria-disabled="true"></button>
       </div>
       <div class="nav-spacer"></div>
       <div class="nav-right">
-        <button class="pill" data-target="itinerary" id="itineraryPill">Itinerary</button>
-        <button id="installBtn" class="btn btn-primary" hidden>Install App</button>
+        <button id="installBtn" class="pill pill--primary" hidden>Install App</button>
+        <button class="pill" data-target="itinerary" id="itineraryRight">Itinerary</button>
       </div>
     </nav>
     <section id="timeline" class="timeline">

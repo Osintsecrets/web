@@ -12,19 +12,21 @@ body {
   padding: 0 16px;
 }
 
-/* header actions */
-.btn { padding: 10px 14px; border: 0; border-radius: 9999px; font: inherit; }
-.btn-ghost { background: transparent; color: #0d5bd7; }
-.btn-primary { background: #0d5bd7; color: #fff; }
-
-header {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
+.pill{
+  background:#c9c9c9;
+  color:#ffffff;
+  border:0;
+  border-radius:9999px;
+  padding:10px 16px;
+  min-height:44px;
+  font:inherit;
 }
+.pill--primary{ background:#0d5bd7; color:#ffffff; }
+.pill--ghost{ background:#c9c9c9; color:#ffffff; }
+.pill--disabled{ opacity:.35; pointer-events:none; }
 
+/* header layout so Refresh sits top-right but looks like the other pills */
+header{ position:relative; display:flex; align-items:center; justify-content:center; }
 header h1 {
   margin: 0;
   font-size: 2rem;
@@ -33,17 +35,12 @@ header h1 {
   border-bottom: 3px solid currentColor;
   padding-bottom: 8px;
 }
+#refreshBtn{ position:absolute; right:12px; top:12px; }
 
-#refreshBtn { position: absolute; right: 12px; top: 12px; }
-
-/* nav layout */
-.nav-bar { display: flex; align-items: center; background: #0d5bd7; padding: 8px 10px; gap: 8px; }
-.nav-left, .nav-right { display: flex; align-items: center; gap: 8px; }
-.nav-spacer { flex: 1 1 auto; }
-
-/* pills */
-.pill { background: #c9c9c9; color: #fff; border: 0; border-radius: 9999px; padding: 10px 14px; min-height: 44px; }
-.pill--disabled { opacity: 0.35; pointer-events: none; }
+/* nav layout (unchanged, included for completeness) */
+.nav-bar{ display:flex; align-items:center; background:#0d5bd7; padding:8px 10px; gap:8px; }
+.nav-left,.nav-right{ display:flex; align-items:center; gap:8px; }
+.nav-spacer{ flex:1 1 auto; }
 
 .timeline {
   margin-top: 24px;
