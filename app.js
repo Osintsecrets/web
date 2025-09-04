@@ -12,7 +12,7 @@
   const langToggle = document.getElementById('langToggle');
 
   // Simple i18n store
-  const I18N = { lang: 'en', dict: {} };
+  const I18N = window.I18N || (window.I18N = { lang: 'en', dict: {} });
 
   function t(key){ return I18N.dict[key] || key; }
 
@@ -25,10 +25,12 @@
   async function loadLang(lang){
     try{
       const res = await fetch(`i18n/${lang}.json`, { cache: 'no-store' });
+      window.I18N = window.I18N || { lang: 'en', dict: {} };
       I18N.dict = await res.json();
       I18N.lang = lang;
       localStorage.setItem('lang', lang);
       applyI18N();
+      renderItineraryDynamic();
     }catch(_){ }
   }
 
@@ -41,8 +43,43 @@
     });
   }
 
+  async function renderItineraryDynamic(){
+    const mount = document.getElementById('itineraryDynamic');
+    if(!mount) return;
+
+    // Determine language (fallback to 'en' if unknown)
+    const lang = (window.I18N?.lang === 'he') ? 'he' : 'en';
+
+    try{
+      const res = await fetch('data/itinerary.json', { cache: 'no-store' });
+      const data = await res.json();
+
+      const ul = document.createElement('ul');
+      ul.className = 'timeline-list';
+
+      (data.items || []).forEach(row=>{
+        const li = document.createElement('li');
+
+        if (row[`gap_${lang}`]) {
+          li.innerHTML = `<div class="gap"><span class="arrow">↓</span> ${row[`gap_${lang}`]}</div>`;
+        } else {
+          const when = row[`when_${lang}`] || row.when_en || '';
+          const note = row[`note_${lang}`] || row.note_en || '';
+          li.innerHTML = `<div class="event"><div class="when">${when}</div><div class="note">${note}</div></div>`;
+        }
+
+        ul.appendChild(li);
+      });
+
+      mount.replaceChildren(ul);
+    }catch(_){
+      // If JSON unavailable, leave mount as-is (no hard error)
+    }
+  }
+
   // init + toggle
   loadLang(detectInitialLang());
+  renderItineraryDynamic();
   langToggle?.addEventListener('click', ()=>{
     const next = (I18N.lang === 'he') ? 'en' : 'he';
     loadLang(next);
@@ -144,30 +181,6 @@
   window.addEventListener('appinstalled', ()=>{ if(installBtn) installBtn.hidden=true; });
 
   // ===== Dynamic renderers =====
-
-  // Itinerary: if data/itinerary.json has items, render them
-  (async function renderItinerary(){
-    const mount = document.getElementById('itineraryDynamic');
-    if(!mount) return;
-    try{
-      const res = await fetch('data/itinerary.json', {cache:'no-store'});
-      const data = await res.json();
-      if(Array.isArray(data.items) && data.items.length){
-        const ul = document.createElement('ul');
-        ul.className = 'timeline-list';
-        data.items.forEach(row=>{
-          const li = document.createElement('li');
-          if(row.gap){
-            li.innerHTML = `<div class="gap"><span class="arrow">↓</span> ${row.gap}</div>`;
-          }else{
-            li.innerHTML = `<div class="event"><div class="when">${row.when||''}</div><div class="note">${row.note||''}</div></div>`;
-          }
-          ul.appendChild(li);
-        });
-        mount.replaceChildren(ul);
-      }
-    }catch(_){ }
-  })();
 
   // Deck plans: read data/decks.json and render cards
   (async function renderDecks(){
