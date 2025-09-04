@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cruise-dashboard-v17';
+const CACHE_NAME = 'cruise-dashboard-v18';
 
 self.addEventListener('message', (event) => {
   if (event.data?.type === 'SKIP_WAITING') self.skipWaiting();
@@ -9,9 +9,9 @@ self.addEventListener('install', (event) => {
     const cache = await caches.open(CACHE_NAME);
     await cache.addAll([
       './',
-      './index.html','./itinerary.html','./floor-plan.html','./important-info.html',
-      './styles.css','./app.js','./floor.js','./manifest.json',
-      './data/itinerary.json','./data/decks.json',
+      './index.html','./itinerary.html','./floor-plan.html','./important-info.html','./ports.html',
+      './styles.css','./app.js','./floor.js','./manifest.json','./ports.js','./currency.js',
+      './data/itinerary.json','./data/decks.json','./data/ports.json',
       './i18n/en.json','./i18n/he.json',
       './assets/images/ship.png','./assets/images/logo.png',
       './assets/images/icons/icon-192.png','./assets/images/icons/icon-512.png'

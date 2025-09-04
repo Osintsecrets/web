@@ -1,0 +1,95 @@
+[
+  {
+    "key": "rhodes",
+    "name": { "en": "Rhodes (Rhodes Town)", "he": "רודוס (עיר רודוס)" },
+    "port_area": { "en": "Commercial Harbour / near Mandraki", "he": "נמל מסחרי / סמוך למנדראקי" },
+    "disclaimer": {
+      "en": "Distances and walk times are approximate from the cruise terminal area.",
+      "he": "המרחקים וזמני ההליכה הם הערכות מנמל העגינה."
+    },
+    "wifi_cafes": [
+      {
+        "name": "Starbucks (Mandraki)",
+        "address": "25 Martiou & Ethnarchou Makariou, Mandraki",
+        "wifi": "free",
+        "approx_distance_m": 900,
+        "approx_walk_min": 12,
+        "notes": "Reliable chain Wi-Fi near Mandraki; air-conditioning.",
+        "sources": [
+          "https://www.tripadvisor.com/Restaurant_Review-g189449-d2655052-Reviews-Starbucks-Rhodes_Dodecanese_South_Aegean.html",
+          "https://www.xo.gr/profile/profile-911275566/en/"
+        ]
+      },
+      {
+        "name": "Yachting Club Cafe (Mandraki)",
+        "address": "Akti Miaouli, Mandraki",
+        "wifi": "free",
+        "approx_distance_m": 1000,
+        "approx_walk_min": 14,
+        "notes": "Cafe on the marina front; popular spot with views.",
+        "sources": [
+          "https://www.tripadvisor.com/Restaurant_Review-g635613-d5016181-Reviews-Yachting_Club_Cafe-Rhodes_Town_Rhodes_Dodecanese_South_Aegean.html",
+          "https://www.harbourguides.com/harbours/Rhodes/shops-"
+        ]
+      }
+    ],
+    "sights": [
+      {
+        "name": { "en": "Old Town (Medieval City) Gates", "he": "עיר עתיקה (שערי העיר)" },
+        "approx_distance_m": 600,
+        "approx_walk_min": 8,
+        "notes": { "en": "Historic UNESCO old town right by the port.", "he": "עיר עתיקה היסטורית בסמוך לנמל." },
+        "sources": [
+          "https://about2cruise.co.uk/rhodes-cruise-ship-port-guide/",
+          "https://cruisemapper.com/ports/rhodes-island-port-139"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "heraklion",
+    "name": { "en": "Heraklion (Crete)", "he": "הרקליון (כרתים)" },
+    "port_area": { "en": "Heraklion Cruise Port / Passenger Terminal", "he": "נמל קרוז הרקליון / טרמינל נוסעים" },
+    "disclaimer": {
+      "en": "Distances and walk times are approximate from the cruise terminal area.",
+      "he": "המרחקים וזמני ההליכה הם הערכות מנמל העגינה."
+    },
+    "wifi_cafes": [
+      {
+        "name": "Port Terminal Wi-Fi",
+        "address": "Heraklion Passenger Terminal",
+        "wifi": "free",
+        "approx_distance_m": 0,
+        "approx_walk_min": 0,
+        "notes": "Free Wi-Fi reportedly available at the terminal building.",
+        "sources": [
+          "https://mycruisestories.com/2020/06/12/heraklion-cruise-port-crete/",
+          "https://about2cruise.co.uk/heraklion-cruise-ship-port-guide/"
+        ]
+      },
+      {
+        "name": "Ploto Cafe Restaurant",
+        "address": "Leof. Nearchou (near marina/Koules)",
+        "wifi": "free",
+        "approx_distance_m": 1200,
+        "approx_walk_min": 16,
+        "notes": "Cafe near the waterfront; reviews mention free Wi-Fi.",
+        "sources": [
+          "https://www.tripadvisor.com/Restaurant_Review-g189417-d6628616-Reviews-Ploto_Cafe_Restaurant-Heraklion_Crete.html"
+        ]
+      }
+    ],
+    "sights": [
+      {
+        "name": { "en": "Koules Fortress", "he": "מצודת קוּלֵס" },
+        "approx_distance_m": 1300,
+        "approx_walk_min": 17,
+        "notes": { "en": "Venetian harbor fortress on the waterfront.", "he": "מבצר ונציאני ליד המרינה." },
+        "sources": [
+          "https://www.whatsinport.com/Heraklion-Crete.htm",
+          "https://www.telegraph.co.uk/travel/cruises/port-guides/heraklion-cruise-port-guide/"
+        ]
+      }
+    ]
+  }
+]

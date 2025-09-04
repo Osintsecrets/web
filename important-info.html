@@ -51,6 +51,7 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0d5bd7">
   <link rel="stylesheet" href="styles.css">
+  <script defer src="currency.js"></script>
 </head>
 <body>
   <header class="header">
@@ -75,6 +76,7 @@
       <a class="menu-link" href="itinerary.html" id="nav-itinerary"><span data-i18n="nav.itinerary">Itinerary</span></a>
       <a class="menu-link" href="floor-plan.html" id="nav-floor"><span data-i18n="nav.floor">Floor plan</span></a>
       <a class="menu-link" href="important-info.html" id="nav-info"><span data-i18n="nav.info">important info</span></a>
+      <a class="menu-link" href="ports.html" id="nav-ports"><span data-i18n="nav_ports">Ports</span></a>
     </nav>
     <hr class="menu-sep">
     <div class="side-menu__actions">
@@ -93,6 +95,27 @@
   </aside>
 
   <main class="main-content">
+    <div class="currency-card">
+  <h2 data-i18n="currency_title">Currency Converter (₪ ↔ €)</h2>
+  <p class="currency-disclaimer" data-i18n="currency_disclaimer">
+    This tool fetches the latest EUR↔ILS rate when you're online and stores it for offline use. 
+    To update to the newest rate when connected, refresh the page/app.
+  </p>
+  <div class="currency-row">
+    <input id="amount" type="number" inputmode="decimal" placeholder="0.00" />
+    <select id="mode">
+      <option value="eur->ils">€ → ₪</option>
+      <option value="ils->eur">₪ → €</option>
+    </select>
+    <button id="refreshRate" type="button">↻</button>
+  </div>
+  <div class="currency-meta">
+    <div><span data-i18n="currency_converted">Converted:</span> <span id="result">—</span></div>
+    <div><span data-i18n="currency_rate">Rate (EUR→ILS):</span> <span class="rate" id="rateDisplay">—</span></div>
+    <div><span data-i18n="currency_last_updated">Last updated:</span> <span id="rateWhen">—</span></div>
+  </div>
+</div>
+
     <section class="container">
       <h2 data-i18n="info.h2">Important Phone Numbers</h2>
 
