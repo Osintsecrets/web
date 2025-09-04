@@ -1,8 +1,9 @@
-const CACHE_NAME = 'cruise-dashboard-v9';
+const CACHE_NAME = 'cruise-dashboard-v10';
 const CORE_ASSETS = [
-  './','./index.html','./styles.css','./app.js','./manifest.json',
-  './assets/images/logo.png','./assets/images/ship.png',
-  './assets/images/icons/icon-192.png','./assets/images/icons/icon-512.png'
+  "./","./index.html","./itinerary.html","./floor-plan.html","./important-info.html",
+  "./styles.css","./app.js","./manifest.json",
+  "./assets/images/ship.png","./assets/images/logo.png",
+  "./assets/images/icons/icon-192.png","./assets/images/icons/icon-512.png"
 ];
 
 self.addEventListener('message', (event)=>{ if(event.data?.type==='SKIP_WAITING'){ self.skipWaiting(); }});

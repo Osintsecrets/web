@@ -6,73 +6,38 @@ body {
   color: #000000;
 }
 
-.container {
-  max-width: 430px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
 .pill{
   background:#c9c9c9;
-  color:#ffffff;
+  color:#fff;
   border:0;
   border-radius:9999px;
   padding:10px 16px;
   min-height:44px;
-  font:inherit;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
 }
-.pill--primary{ background:#0d5bd7; color:#ffffff; }
-.pill--ghost{ background:#c9c9c9; color:#ffffff; }
+.pill--primary{ background:#0d5bd7; color:#fff; }
+.pill--ghost{ background:#c9c9c9; color:#fff; }
 .pill--disabled{ opacity:.35; pointer-events:none; }
+.pill--active{ outline:2px solid #fff; box-shadow:0 0 0 2px #0d5bd7 inset; }
 
-/* header layout so Refresh sits top-right but looks like the other pills */
 header{ position:relative; display:flex; align-items:center; justify-content:center; }
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #0d5bd7;
-  border-bottom: 3px solid currentColor;
-  padding-bottom: 8px;
-}
 #refreshBtn{ position:absolute; right:12px; top:12px; }
 
-/* nav layout (unchanged, included for completeness) */
+.title{ text-align:center; color:#0d5bd7; border-bottom:3px solid currentColor; padding-bottom:6px; margin:16px auto; }
+
 .nav-bar{ display:flex; align-items:center; background:#0d5bd7; padding:8px 10px; gap:8px; }
-.nav-left,.nav-right{ display:flex; align-items:center; gap:8px; }
+.nav-left,.nav-right{ display:flex; gap:8px; align-items:center; }
 .nav-spacer{ flex:1 1 auto; }
 
-.timeline {
-  margin-top: 24px;
-}
+.main-content{ padding:20px; max-width:430px; margin:0 auto; }
 
-.timeline-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
+.footer-image{ width:100%; height:auto; display:block; margin:24px auto 0; max-width:430px; }
 
-.event {
-  line-height: 1.5;
-  margin-bottom: 24px;
-}
-
-.arrow {
-  font-size: 24px;
-  color: #0d5bd7;
-  margin-bottom: 8px;
-}
-
-.duration {
-  font-weight: 600;
-  color: #0d5bd7;
-  margin-bottom: 24px;
-}
-
-.ship-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-top: 24px;
-}
+.timeline { margin-top:24px; }
+.timeline-list { list-style:none; padding:0; margin:0; text-align:center; }
+.event { line-height:1.5; margin-bottom:24px; }
+.arrow { font-size:24px; color:#0d5bd7; margin-bottom:8px; }
+.duration { font-weight:600; color:#0d5bd7; margin-bottom:24px; }
