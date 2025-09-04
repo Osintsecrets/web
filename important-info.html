@@ -10,40 +10,44 @@
 </head>
 <body>
   <header class="header">
-    <button id="menuBtn" class="icon-btn" aria-label="Open menu" aria-haspopup="true" aria-controls="sideMenu" aria-expanded="false">☰</button>
+    <button id="menuBtn" class="hamburger" aria-label="Open menu" aria-controls="sideMenu" aria-expanded="false" aria-haspopup="dialog">
+      <span class="hamburger__bar"></span>
+      <span class="hamburger__bar"></span>
+      <span class="hamburger__bar"></span>
+    </button>
     <h1 class="title">IMPORTANT INFO</h1>
   </header>
 
-  <!-- Off-canvas menu + overlay -->
   <div id="overlay" class="overlay" hidden></div>
+
   <aside id="sideMenu" class="side-menu" aria-hidden="true" role="dialog" aria-labelledby="menuHeading" tabindex="-1">
     <div class="side-menu__header">
       <h2 id="menuHeading">Menu</h2>
-      <button id="closeMenuBtn" class="icon-btn" aria-label="Close menu">✕</button>
+      <button id="closeMenuBtn" class="close-btn" aria-label="Close menu">✕</button>
     </div>
     <nav class="side-menu__nav">
       <a class="menu-link" href="index.html">Home</a>
-      <a class="menu-link" href="itinerary.html">Itinerary</a>
-      <a class="menu-link" href="floor-plan.html">Floor plan</a>
-      <a class="menu-link" href="important-info.html">important info</a>
+      <a class="menu-link" href="itinerary.html" id="nav-itinerary">Itinerary</a>
+      <a class="menu-link" href="floor-plan.html" id="nav-floor">Floor plan</a>
+      <a class="menu-link" href="important-info.html" id="nav-info">important info</a>
     </nav>
     <hr class="menu-sep">
     <div class="side-menu__actions">
       <button id="refreshBtn" class="menu-action">Refresh</button>
-      <button id="installBtn" class="menu-action" hidden>Install (Android)</button>
+      <button id="installBtn" class="menu-action menu-action--primary" hidden>Install (Android)</button>
       <button id="showA2HS" class="menu-action">How to Add to Home Screen (Android)</button>
       <div id="a2hsHelp" class="a2hs-help" hidden>
         <ol>
           <li>Open this site in <strong>Chrome</strong> on your Android phone.</li>
-          <li>Tap the <strong>⋮</strong> menu (top right).</li>
-          <li>Tap <strong>Add to Home screen</strong> or <strong>Install app</strong>.</li>
-          <li>Confirm to add the app icon to your Home screen.</li>
+          <li>Tap the <strong>⋮</strong> menu (top-right).</li>
+          <li>Choose <strong>Add to Home screen</strong> or <strong>Install app</strong>.</li>
+          <li>Confirm to add the icon to your Home screen.</li>
         </ol>
       </div>
     </div>
   </aside>
 
-  <main class="main-content">
+  <main class="main-content container">
     <div class="table-container">
       <h2>Important Phone Numbers</h2>
       <table class="info-table">
@@ -100,10 +104,5 @@
   </footer>
 
   <script src="app.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
-    }
-  </script>
 </body>
 </html>
